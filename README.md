@@ -1,85 +1,81 @@
-# 🏴‍☠️ piratas.club
+# piratas.club
 
-[![VitePress](https://img.shields.io/badge/VitePress-1.5.0-646CFF?style=for-the-badge&logo=vitepress&logoColor=white)](https://vitepress.dev/)
-[![Vue.js](https://img.shields.io/badge/Vue.js-3.5.22-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white)](https://vuejs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
+[![VitePress](https://img.shields.io/badge/VitePress-1.5.0-646CFF?style=flat-square&logo=vitepress&logoColor=white)](https://vitepress.dev/)
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.5.22-4FC08D?style=flat-square&logo=vue.js&logoColor=white)](https://vuejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20+-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](https://opensource.org/licenses/MIT)
 
-> **Vault de Recursos Digitais** — O maior compêndio digital do mundo e em português de ferramentas, guias e conhecimentos essenciais para a cultura hacker.
+Repositório de documentação estática construído com VitePress, servindo como vault de recursos digitais, guias técnicos e ferramentas organizadas para a comunidade.
 
-## 🌊 Navegando pelos Mares Digitais
+**Site:** [piratas.club](https://piratas.club) | **Repositório:** [github.com/runawaydevil/runawaydevil.github.io](https://github.com/runawaydevil/runawaydevil.github.io)
 
-Bem-vindos ao **piratas.club**, um vault digital onde o conhecimento flui livre como os ventos dos sete mares. Este é um espaço dedicado a quem cria, aprende e experimenta tecnologia, oferecendo ferramentas, guias e materiais organizados para impulsionar seus projetos.
+## Overview
 
-Este não é apenas mais um site de documentação — é um **tesouro digital** construído pela comunidade, para a comunidade, seguindo os princípios do **software livre** e do **conhecimento aberto**.
+Este projeto implementa um site de documentação estática usando VitePress como framework base, com extensões customizadas em Vue.js 3 e TypeScript. O conteúdo é organizado em seções principais (Diário de Bordo, Blog) e processado através de Static Site Generation (SSG) para máxima performance.
 
-## 🗺️ O Que Você Encontrará
+A arquitetura foi projetada para escalabilidade, com sistema de indexação de conteúdo, engine de similaridade para recomendações, e componentes Vue reutilizáveis para interatividade no cliente.
 
-### 📖 **Diário de Bordo**
-Guias práticos e tutoriais diretos sobre tecnologia underground, automação e cultura hacker:
+## Arquitetura
 
-- **🌐 FHMY (Free Media Heck Yeah)**
-  - **A maior coleção** de recursos gratuitos da internet
-  - **Streaming & Downloads** — Filmes, séries, música e jogos
-  - **Privacidade & Segurança** — VPNs, DNS, navegação anônima
-  - **Ferramentas & Utilitários** — Software, apps e extensões
+### Stack Principal
 
-- **🏴‍☠️ Megathread Pirata**
-  - **Comunidade Brasileira** — Recursos curados pela comunidade
-  - **Guias Especializados** — FitGirl, Autobrr, Stremio e mais
-  - **Automação de Mídia** — Sonarr, Radarr, Plex, Jellyfin
-  - **Trackers & Torrents** — Melhores práticas e sites seguros
+- **VitePress 1.5.0** - Framework de documentação estática baseado em Vite
+- **Vue.js 3.5.22** - Framework reativo (Composition API)
+- **TypeScript 5.0.0** - Tipagem estática
+- **Node.js 20+** - Runtime requirement
 
-### 📝 **Blog**
-Arquivo vivo do projeto com:
-- **Atualizações** — Novidades e melhorias
-- **Experimentos** — Testes e descobertas
-- **Notas Técnicas** — Insights e aprendizados
-- **Comunidade** — Agradecimentos e colaborações
+### Estrutura de Diretórios
 
-## ⚡ Tecnologias que Impulsionam o Navio
+```
+docs/
+├── .vitepress/          # Configuração VitePress
+│   ├── config.ts        # Configuração principal
+│   └── theme/           # Tema customizado
+├── components/          # Componentes Vue
+│   ├── content-discovery/  # Sistema de descoberta
+│   └── interactivity/      # Sistema interativo
+├── utils/               # Utilitários TypeScript
+├── dbordo/              # Conteúdo principal
+│   ├── fhmy/            # Free Media Heck Yeah
+│   └── pirataria-thread/ # Megathread Pirata
+├── blog/                # Posts do blog
+└── public/              # Assets estáticos
+```
 
-- **[VitePress](https://vitepress.dev/)** — Framework de documentação estática moderna
-- **[Vue.js 3](https://vuejs.org/)** — Framework reativo para interfaces
-- **[TypeScript](https://www.typescriptlang.org/)** — Tipagem estática para JavaScript
-- **[Node.js 18+](https://nodejs.org/)** — Runtime JavaScript
-- **GitHub Pages** — Hospedagem estática gratuita
+### Componentes Principais
 
-## 📊 Estatísticas do Projeto
+**Content Discovery:**
+- `RelatedResources.vue` - Exibe recursos relacionados usando engine de similaridade
+- `FilterControls.vue` - Sistema de filtros por categoria/tag/tipo
+- `TagsPage.vue` - Visualização de tags e categorias
 
-- **📚 Seções Principais:** 2 (Diário de Bordo, Blog)
-- **📖 Documentos:** 100+ páginas de conteúdo
-- **🔗 Links Úteis:** 2000+ recursos organizados
-- **🌐 Idiomas:** Português (pt-BR)
-- **📅 Última Atualização:** Outubro 2025
-- **⭐ Versão:** 1.0.0 (Estável)
+**Interactivity:**
+- `RatingSystem.vue` - Sistema de avaliação (1-5 estrelas) com persistência em LocalStorage
+- `CommentsSystem.vue` - Placeholder para integração com Giscus
 
-## 🚀 Como Contribuir
+**Utilities:**
+- `ContentIndexer` - Indexação de conteúdo Markdown
+- `SimilarityEngine` - Algoritmos de similaridade (Jaccard, TF-IDF, Levenshtein)
+- `PageMetadataExtractor` - Extração de metadados do DOM/VitePress
+- `RatingSystem` - Gerenciamento de avaliações com cache
+- `LocalStorageManager` - Persistência de dados do usuário
 
-Este projeto segue os **princípios do software livre** e pertence à comunidade. O conhecimento deve ser **livre e acessível** a todos. Você pode contribuir de várias formas:
+### Decisões Técnicas
 
-### 🤝 **Formas de Contribuição**
-- 🍴 **Fork** o repositório e envie Pull Requests
-- 🌿 **Criar branches** para suas contribuições
-- ➕ **Adicionar conteúdo** novo ou melhorar existente
-- 🐛 **Reportar bugs** ou sugerir melhorias
-- 📖 **Traduzir** para outros idiomas
-- 🔗 **Compartilhar recursos** úteis
-- 💡 **Sugerir melhorias** na organização
+- **SSG over SSR**: Escolhido para performance e simplicidade de deploy
+- **TypeScript strict mode**: Tipagem rigorosa para reduzir erros em runtime
+- **VitePress plugins**: Auto-sidebar, RSS feed, ícones automáticos
+- **LocalStorage**: Sistema de ratings funciona offline, sem backend
+- **Modular architecture**: Separação clara entre componentes, utils e conteúdo
 
-### 🌍 **Filosofia Open Source**
-> *"A informação quer ser livre"* — Stewart Brand
+## Pré-requisitos
 
-Acreditamos que o conhecimento técnico deve ser democratizado. Este projeto é:
-- **Totalmente gratuito** — sem paywalls ou limitações
-- **Código aberto** — transparente e auditável  
-- **Colaborativo** — construído pela comunidade
-- **Educacional** — focado no aprendizado
-- **Inclusivo** — acessível a todos os níveis
+- Node.js >= 20.0.0
+- npm >= 9.0.0 (ou equivalente)
+- Git (para clone e versionamento)
 
-### Desenvolvimento Local
+## Instalação e Desenvolvimento
 
 ```bash
 # Clone o repositório
@@ -89,94 +85,157 @@ cd runawaydevil.github.io
 # Instale as dependências
 npm install
 
-# Execute em modo desenvolvimento
+# Execute em modo desenvolvimento (hot-reload)
 npm run dev
 
 # Build para produção
 npm run build
+
+# Preview do build local
+npm run preview
 ```
 
-## 🌍 Deploy e Infraestrutura
+### Scripts Disponíveis
 
-O projeto utiliza tecnologias modernas e deploy automático:
+- `npm run dev` - Servidor de desenvolvimento (porta padrão: 5173)
+- `npm run build` - Build de produção (output: `docs/.vitepress/dist`)
+- `npm run preview` - Preview local do build
+- `npm run lint` - Verificação ESLint do config.ts
+- `npm run lint:fix` - Correção automática de problemas ESLint
+- `npm run type-check` - Verificação TypeScript sem emit
+- `npm run test` - Execução de testes Jest
+- `npm run ci` - Pipeline completo (type-check + lint + test + build)
+- `npm run deploy:cloudflare` - Build + deploy no Cloudflare Pages
 
-### 🚀 **Deploy Automático**
-- **GitHub Pages** — Deploy principal ([piratas.club](https://piratas.club))
-- **GitHub Actions** — CI/CD automatizado
-- **VitePress Build** — Geração estática otimizada
-- **CDN Global** — Distribuição mundial
+## Build e Deploy
 
-### 🛠️ **Arquitetura Técnica**
-- **Static Site Generation** — Performance máxima
-- **Vue.js Components** — Interatividade moderna
-- **TypeScript** — Tipagem estática e segurança
-- **Responsive Design** — Funciona em todos os dispositivos
-- **Dark Theme** — Interface otimizada para desenvolvedores
+### Processo de Build
 
-## 📜 Licença e Créditos
+O build utiliza VitePress para gerar arquivos estáticos otimizados:
 
-Este projeto é distribuído sob a **Licença MIT** — você é livre para copiar, modificar e distribuir como bem entender.
+1. Processamento de Markdown com frontmatter
+2. Compilação de componentes Vue
+3. Geração de índices e metadados
+4. Otimização de assets (CSS, JS, imagens)
+5. Output final em `docs/.vitepress/dist`
 
-### 🏴‍☠️ Créditos da Comunidade
+### CI/CD
 
-Este vault digital pertence a toda a **comunidade de piratas do Brasil** e do mundo. Créditos especiais:
+**GitHub Actions** (`.github/workflows/deploy.yml`):
+- Trigger: push para branch `main` ou workflow_dispatch
+- Jobs:
+  1. **build**: Instala dependências, executa CI checks, gera artifact
+  2. **deploy**: Deploy automático para GitHub Pages
+  3. **deploy-cloudflare**: Deploy opcional para Cloudflare Pages (requer secrets)
 
-- **r/pirataria** e **r/piracy** — Fonte principal de recursos
-- **Comunidade GitHub** — Contribuidores e colaboradores
-- **Awesome Lists** — Projetos que inspiraram nossa organização
-- **Archive.org** — Preservação digital e conhecimento livre
-- **Creative Commons** — Licenças que empoderam criadores
-- **Software Heritage** — Preservação do código-fonte mundial
+**Jenkins** (alternativo):
+- Pipeline completo com stages: checkout, setup, install, test, lint, build, deploy
+- Deploy via SSH/rsync para servidor próprio
 
-### 🌟 **Reconhecimentos**
-Agradecemos a todos os **hackers, desenvolvedores, pesquisadores e entusiastas** que acreditam que o conhecimento deve ser livre e acessível. Este projeto é uma homenagem à cultura de **compartilhamento** e **colaboração** que move a internet.
+### Ambientes
 
-### ⚖️ **Disclaimer Legal**
+- **Produção**: GitHub Pages (piratas.club) + Cloudflare Pages (backup)
+- **Staging**: Branch `main` (deploy automático)
+- **Desenvolvimento**: Local via `npm run dev`
 
-**Este é um diretório educacional — não hospedamos conteúdo.**
+## Estrutura do Projeto
 
-- 📚 **Fins Educacionais** — Todo conteúdo é para aprendizado
-- 🔗 **Apenas Links** — Direcionamos para recursos externos
-- 📖 **Documentação** — Organizamos conhecimento público
-- 🎓 **Pesquisa** — Facilitamos o acesso à informação
-- ⚖️ **Responsabilidade** — Cada usuário é responsável pelo uso
+### Configuração VitePress
 
-> *"Que este trabalho inspire, sirva e sobreviva — como todo bom artefato digital que se recusa a desaparecer."*
+O arquivo `docs/.vitepress/config.ts` contém:
+- Configuração de plugins (AutoSidebar, RSS, Icons, Components)
+- Meta tags para SEO
+- Navegação e sidebar
+- Configuração de tema (dark/light mode)
 
-## 🌐 Links e Comunidade
+### Tema Customizado
 
-### 🔗 **Links Principais**
-- 🌐 **Site Oficial:** [piratas.club](https://piratas.club)
-- 🐙 **Repositório:** [github.com/runawaydevil/runawaydevil.github.io](https://github.com/runawaydevil/runawaydevil.github.io)
-- 📝 **Blog:** [piratas.club/blog](https://piratas.club/blog/)
+Dois arquivos de tema coexistem:
+- `docs/.vitepress/theme/index.ts` - Tema principal (TypeScript, completo)
+- `docs/.vitepress/theme/index.js` - Fallback (JavaScript, básico)
 
-### 👨‍💻 **Mantenedor**
-**(runawaydevil)**
-- 🌐 **Site Pessoal:** [pablo.space](https://pablo.space)
-- 🐙 **GitHub:** [github.com/runawaydevil](https://github.com/runawaydevil)
-- 🐦 **Twitter/X:** [@runawayd3vil](https://x.com/runawayd3vil)
-- 🧠 **Reddit:** [u/runawaydevil](https://reddit.com/u/runawaydevil)
-- 📧 **Email:** pablomurad@pm.me
+O tema customizado adiciona:
+- Sistema de favicon com fallback
+- Persistência de preferência de tema
+- Menu mobile funcional
+- Injeção de componentes no slot `doc-after`
 
-### 🤝 **Como Ajudar**
-- ⭐ **Star** o repositório se achou útil
-- 🍴 **Fork** e contribua com melhorias
-- 🐛 **Reporte bugs** via Issues
-- 💡 **Sugira recursos** novos
-- 📢 **Compartilhe** com a comunidade
+### Sistema de Indexação
+
+O `BuildTimeIndexer` escaneia recursivamente arquivos Markdown e gera:
+- Índice de páginas com metadados
+- Índice de tags com contagem
+- Índice de categorias com subcategorias
+
+Atualmente preparado para build-time, pode ser integrado ao processo de build do VitePress.
+
+## Tecnologias e Dependências
+
+### Dependências de Produção
+
+- `vitepress`: ^1.5.0 - Framework base
+- `vue`: ^3.5.22 - Framework frontend
+- `gray-matter`: ^4.0.3 - Parsing de frontmatter YAML
+- `vite-plugin-vitepress-auto-sidebar`: ^1.7.1 - Geração automática de sidebar
+
+### Dependências de Desenvolvimento
+
+- `typescript`: ^5.0.0 - Compilador TypeScript
+- `@typescript-eslint/parser`: ^6.21.0 - Parser ESLint para TS
+- `@typescript-eslint/eslint-plugin`: ^6.21.0 - Plugin ESLint para TS
+- `eslint`: ^8.0.0 - Linter JavaScript/TypeScript
+- `jest`: ^30.2.0 - Framework de testes
+- `wrangler`: ^4.45.4 - CLI do Cloudflare Workers/Pages
+
+### Plugins VitePress
+
+- `vitepress-plugin-rss`: ^0.3.2 - Geração de feed RSS
+- `unplugin-icons`: ^22.4.2 - Sistema de ícones (MDI, Carbon, FontAwesome)
+- `unplugin-vue-components`: ^29.1.0 - Importação automática de componentes
+
+## Contribuindo
+
+Este projeto segue os princípios do software livre. Contribuições são bem-vindas.
+
+### Guidelines
+
+1. **Fork e Branch**: Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+2. **Commits**: Use mensagens descritivas e siga convenções de commit
+3. **Code Style**: TypeScript strict mode, ESLint configurado
+4. **Testes**: Execute `npm run ci` antes de fazer push
+5. **Pull Request**: Descreva claramente as mudanças e o motivo
+
+### Áreas de Contribuição
+
+- Adição de conteúdo (guias, recursos, links)
+- Melhorias na organização e estrutura
+- Correção de bugs
+- Melhorias de performance
+- Traduções
+- Documentação técnica
+
+## Licença
+
+Este projeto está licenciado sob a **MIT License**. Veja o arquivo `LICENSE` para detalhes.
+
+## Créditos
+
+**Mantenedor:** [runawaydevil](https://github.com/runawaydevil) (Pablo Murad)
+
+**Contato:**
+- Email: pablomurad@pm.me
+- Site: [pablo.space](https://pablo.space)
+- GitHub: [@runawaydevil](https://github.com/runawaydevil)
+
+**Reconhecimentos:**
+- Comunidades r/pirataria e r/piracy por recursos e inspiração
+- Projetos Awesome Lists pela organização
+- Archive.org e Software Heritage pela preservação digital
+
+## Disclaimer Legal
+
+Este é um diretório educacional que organiza links e recursos públicos. Não hospedamos conteúdo protegido por direitos autorais. Todo conteúdo é para fins educacionais e de pesquisa. Cada usuário é responsável pelo uso que faz das informações aqui disponibilizadas.
 
 ---
-small changes
 
-*"Automatizar é libertar tempo. Organizar é libertar espaço."*  
-— **runawaydevil**
-
----
-
-<div align="center">
-
-**Feito com ❤️ para a comunidade**
-
-*Copyright © 2024-2026 RunawayDevil*
-
-</div>
+*Copyright © 2023-2026 RunawayDevil*

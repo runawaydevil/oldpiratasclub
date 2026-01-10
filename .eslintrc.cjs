@@ -24,10 +24,18 @@ module.exports = {
     'node_modules/',
     'docs/.vitepress/dist/',
     'docs/.vitepress/cache/',
+    'docs/.vitepress/.temp/',
     '*.d.ts',
     'coverage/',
     'tests/',
-    'docs/**/*.ts',
-    'docs/**/*.vue'
+    // Ignorar arquivos Vue (geralmente não precisam de lint padrão)
+    'docs/**/*.vue',
+    // Ignorar arquivos de tema gerados automaticamente
+    'docs/.vitepress/theme/**/*.js',
+    // Permitir que docs/.vitepress/config.ts seja verificado
+    // Ignorar apenas arquivos TypeScript em subdiretórios específicos se necessário
+    'docs/utils/**/*.ts',
+    'docs/components/**/*.ts',
+    'docs/types/**/*.ts'
   ]
 }
