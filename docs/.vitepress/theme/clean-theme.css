@@ -1,0 +1,579 @@
+/**
+ * PIRATAS.CLUB - TEMA LIMPO E FUNCIONAL
+ * Suporte completo para tema claro e escuro
+ */
+
+/* ========================================
+   IMPORTAÇÕES E FONTES
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/* ========================================
+   BARRAS DE ROLAGEM INVISÍVEIS
+======================================== */
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   TEMA CLARO (PADRÃO)
+======================================== */
+
+html:not(.dark) {
+  /* Layout */
+  --vp-layout-bg-color: #ffffff;
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.9);
+  --vp-sidebar-bg-color: rgba(255, 255, 255, 0.9);
+  
+  /* Cores base */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f8fafc;
+  --vp-c-bg-soft: #f1f5f9;
+  --vp-c-text-1: #1f2937;
+  --vp-c-text-2: #374151;
+  --vp-c-text-3: #6b7280;
+  
+  /* Marca/Brand */
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #1d4ed8;
+  --vp-c-brand-3: #1e40af;
+  
+  /* Botões */
+  --vp-button-brand-bg: #3b82f6;
+  --vp-button-brand-hover-bg: #1d4ed8;
+  --vp-button-brand-active-bg: #1e40af;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-hover-border: transparent;
+  
+  /* Bordas */
+  --vp-c-border: rgba(31, 41, 55, 0.2);
+  --vp-c-divider: rgba(31, 41, 55, 0.2);
+  
+  /* Código */
+  --vp-c-code-bg: #f1f5f9;
+  --vp-c-code-text: #1f2937;
+  
+  /* Home */
+  --vp-home-hero-name-color: #1f2937;
+  --vp-home-hero-name-background: transparent;
+}
+
+/* Layout tema claro */
+html:not(.dark) .VPLayout {
+  background: #ffffff !important;
+  min-height: 100vh;
+}
+
+/* Navbar tema claro */
+html:not(.dark) .VPNav {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+html:not(.dark) .VPNav .nav .link {
+  color: #1f2937 !important;
+}
+
+/* Sidebar tema claro */
+html:not(.dark) .VPSidebar {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+html:not(.dark) .VPSidebar .items .link a,
+html:not(.dark) .VPSidebar .items .group .title {
+  color: #1f2937 !important;
+}
+
+html:not(.dark) .VPSidebar .items .link a:hover {
+  color: #111827 !important;
+}
+
+html:not(.dark) .VPSidebar .items .link.is-active a {
+  color: #3b82f6 !important;
+  font-weight: 500;
+}
+
+/* Conteúdo tema claro */
+html:not(.dark) .VPDoc .content {
+  background: transparent !important;
+  color: #1f2937 !important;
+}
+
+html:not(.dark) .VPDoc .content h1,
+html:not(.dark) .VPDoc .content h2,
+html:not(.dark) .VPDoc .content h3 {
+  color: #1f2937 !important;
+}
+
+html:not(.dark) .VPDoc .content p,
+html:not(.dark) .VPDoc .content li {
+  color: #374151 !important;
+}
+
+/* Links tema claro */
+html:not(.dark) a {
+  color: #3b82f6 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+html:not(.dark) a:hover {
+  color: #1d4ed8 !important;
+  text-decoration: underline;
+}
+
+html:not(.dark) a:visited {
+  color: #1e40af !important;
+}
+
+/* Botões tema claro */
+html:not(.dark) .VPButton.brand {
+  background: #3b82f6 !important;
+  border: none !important;
+  color: #ffffff !important;
+}
+
+html:not(.dark) .VPButton.brand:hover {
+  background: #1d4ed8 !important;
+}
+
+/* Cards e features tema claro */
+html:not(.dark) .VPFeature {
+  background: rgba(31, 41, 55, 0.02) !important;
+  border: 1px solid rgba(31, 41, 55, 0.1) !important;
+}
+
+/* Blockquotes tema claro */
+html:not(.dark) .VPDoc .content blockquote {
+  border-left: 2px solid #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+  color: #374151;
+}
+
+/* Code blocks tema claro */
+html:not(.dark) .VPDoc .content code {
+  background: #f1f5f9 !important;
+  color: #1f2937 !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Título home tema claro */
+html:not(.dark) .VPHome .name {
+  color: #1f2937 !important;
+  font-family: 'Special Elite', monospace !important;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   TEMA ESCURO
+======================================== */
+
+.dark {
+  /* Layout */
+  --vp-layout-bg-color: transparent;
+  --vp-nav-bg-color: rgba(0, 0, 0, 0.8);
+  --vp-sidebar-bg-color: rgba(0, 0, 0, 0.8);
+  
+  /* Cores base */
+  --vp-c-bg: #000000;
+  --vp-c-bg-alt: #000000;
+  --vp-c-bg-soft: #000000;
+  --vp-c-text-1: #f1f5f9;
+  --vp-c-text-2: #e2e8f0;
+  --vp-c-text-3: #cbd5e1;
+  
+  /* Marca/Brand */
+  --vp-c-brand-1: #ffffff;
+  --vp-c-brand-2: #ffffff;
+  --vp-c-brand-3: #ffffff;
+  
+  /* Botões */
+  --vp-button-brand-bg: rgba(255, 255, 255, 0.1);
+  --vp-button-brand-hover-bg: rgba(255, 255, 255, 0.2);
+  --vp-button-brand-active-bg: rgba(255, 255, 255, 0.15);
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-border: rgba(255, 255, 255, 0.2);
+  --vp-button-brand-hover-border: rgba(255, 255, 255, 0.3);
+  
+  /* Bordas */
+  --vp-c-border: rgba(255, 255, 255, 0.2);
+  --vp-c-divider: rgba(255, 255, 255, 0.2);
+  
+  /* Código */
+  --vp-c-code-bg: #000000;
+  --vp-c-code-text: #f1f5f9;
+  
+  /* Home */
+  --vp-home-hero-name-color: #ffffff;
+  --vp-home-hero-name-background: transparent;
+}
+
+/* Layout tema escuro - fundo marítimo */
+.dark .VPLayout {
+  background: 
+    radial-gradient(ellipse at top, rgba(15, 23, 42, 0.8) 0%, transparent 50%),
+    linear-gradient(180deg, #0f172a 0%, #1e293b 30%, #334155 60%, #0f172a 100%),
+    radial-gradient(ellipse at bottom, rgba(30, 58, 138, 0.3) 0%, transparent 70%),
+    #000000 !important;
+  min-height: 100vh;
+}
+
+/* Efeito de estrelas */
+.dark .VPLayout::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #ffffff, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
+    radial-gradient(2px 2px at 160px 30px, #ffffff, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  opacity: 0.2;
+  z-index: -10;
+  pointer-events: none;
+}
+
+/* Navbar tema escuro */
+.dark .VPNav {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.dark .VPNav .nav .link {
+  color: #ffffff !important;
+}
+
+/* Sidebar tema escuro */
+.dark .VPSidebar {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+.dark .VPSidebar .items .link a,
+.dark .VPSidebar .items .group .title {
+  color: #ffffff !important;
+}
+
+.dark .VPSidebar .items .link a:hover {
+  color: #f8f8f8 !important;
+}
+
+.dark .VPSidebar .items .link.is-active a {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* Links tema escuro */
+.dark a {
+  color: #ffffff !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dark a:hover {
+  color: #f8f8f8 !important;
+  text-decoration: underline;
+}
+
+.dark a:visited {
+  color: #e8e8e8 !important;
+}
+
+/* Botões tema escuro */
+.dark .VPButton.brand {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .VPButton.brand:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Cards e features tema escuro */
+.dark .VPFeature {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Blockquotes tema escuro */
+.dark .VPDoc .content blockquote {
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+/* Code blocks tema escuro */
+.dark .VPDoc .content code {
+  background: #000000 !important;
+  color: #f1f5f9 !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation buttons tema escuro */
+.dark .VPDoc .content .next-and-prev-link {
+  border: 1px dashed rgba(255, 255, 255, 0.2) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  color: #ffffff !important;
+}
+
+.dark .VPDoc .content .next-and-prev-link:hover {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark .VPDoc .content .next-and-prev-link * {
+  color: #ffffff !important;
+}
+
+/* Título home tema escuro */
+.dark .VPHome .name {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 8px rgba(248, 246, 240, 0.4),
+    0 0 15px rgba(245, 243, 237, 0.3),
+    0 0 25px rgba(242, 240, 234, 0.2);
+  font-family: 'Special Elite', monospace !important;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   COMPONENTES ESPECÍFICOS
+======================================== */
+
+/* Fonte Special Elite para títulos */
+.VPNav .title,
+.VPDoc .content h1 {
+  font-family: 'Special Elite', monospace !important;
+}
+
+/* Botão principal da home */
+.VPHome .actions .VPButton.brand {
+  background: #8b5cf6 !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPHome .actions .VPButton.brand:hover {
+  background: #7c3aed !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ========================================
+   RESPONSIVIDADE MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  /* Menu hamburger */
+  .VPNavBarHamburger {
+    display: block !important;
+    cursor: pointer !important;
+    z-index: 1000 !important;
+  }
+  
+  .VPNavBarHamburger .container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .VPNavBarHamburger .top,
+  .VPNavBarHamburger .middle,
+  .VPNavBarHamburger .bottom {
+    display: block !important;
+    width: 20px !important;
+    height: 2px !important;
+    margin: 2px 0 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  /* Cores do hamburger */
+  .dark .VPNavBarHamburger .top,
+  .dark .VPNavBarHamburger .middle,
+  .dark .VPNavBarHamburger .bottom {
+    background-color: #ffffff !important;
+  }
+  
+  html:not(.dark) .VPNavBarHamburger .top,
+  html:not(.dark) .VPNavBarHamburger .middle,
+  html:not(.dark) .VPNavBarHamburger .bottom {
+    background-color: #1f2937 !important;
+  }
+  
+  /* Menu mobile */
+  .VPNavScreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 999 !important;
+    padding-top: 60px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  .dark .VPNavScreen {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  
+  html:not(.dark) .VPNavScreen {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  
+  /* Links do menu mobile */
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink {
+    padding: 12px 24px !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  
+  .dark .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink {
+    color: #ffffff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  html:not(.dark) .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink {
+    color: #1f2937 !important;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.1) !important;
+  }
+  
+  /* Hover nos links mobile */
+  .dark .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8f8f8 !important;
+  }
+  
+  html:not(.dark) .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink:hover {
+    background-color: rgba(31, 41, 55, 0.1) !important;
+    color: #111827 !important;
+  }
+  
+  /* Botão de tema mobile */
+  .VPSwitchAppearance {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    cursor: pointer !important;
+    border-radius: 8px !important;
+    transition: background-color 0.3s ease !important;
+  }
+  
+  .dark .VPSwitchAppearance {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  html:not(.dark) .VPSwitchAppearance {
+    background-color: rgba(31, 41, 55, 0.1) !important;
+  }
+  
+  .VPSwitchAppearance:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  /* Ícone do botão de tema */
+  .VPSwitchAppearance .sun,
+  .VPSwitchAppearance .moon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  .dark .VPSwitchAppearance .sun,
+  .dark .VPSwitchAppearance .moon {
+    color: #ffffff !important;
+  }
+  
+  html:not(.dark) .VPSwitchAppearance .sun,
+  html:not(.dark) .VPSwitchAppearance .moon {
+    color: #1f2937 !important;
+  }
+  
+  /* Melhorar área de toque para links */
+  a, button, .VPButton {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Conteúdo principal - ajustar padding */
+  .VPContent {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .VPDoc .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Navbar mobile */
+  .VPNav {
+    height: 60px !important;
+    padding: 0 16px !important;
+  }
+  
+  .VPNavBar {
+    height: 60px !important;
+  }
+  
+  /* Melhorar scrolling em iOS */
+  body {
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Prevenir zoom em inputs */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}

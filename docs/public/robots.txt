@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Permitir indexação de conteúdo público
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Bloquear áreas sensíveis
+Disallow: /admin/
+Disallow: /.vitepress/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://piratas.club/sitemap.xml

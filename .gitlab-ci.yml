@@ -1,0 +1,43 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  NODE_VERSION: "18"
+  VITEPRESS_DIST_DIR: "docs/.vitepress/dist"
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+
+build:
+  stage: build
+  image: node:${NODE_VERSION}-alpine
+  before_script:
+    - apk add --no-cache git
+    - git config --global user.email "ci@gitlab.com"
+    - git config --global user.name "GitLab CI"
+    - npm ci --cache .npm --prefer-offline
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - $VITEPRESS_DIST_DIR
+    expire_in: 1 hour
+  only:
+    - main
+    - master
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  before_script:
+    - apk add --no-cache rsync
+  script:
+    - mkdir -p public
+    - rsync -av --delete docs/.vitepress/dist/ public/
+  artifacts:
+    paths: [public]
+  only: [main]
