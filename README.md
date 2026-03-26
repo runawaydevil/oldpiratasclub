@@ -132,7 +132,7 @@ O build utiliza VitePress para gerar arquivos estáticos otimizados:
 - Pipeline completo com stages: checkout, setup, install, test, lint, build, deploy
 - Deploy via SSH/rsync para servidor próprio
 
-**Cloudflare Pages** (integração Git): o projeto deve estar ligado a este repositório (`runawaydevil/oldpiratasclub`), não ao `runawaydevil.github.io`. Em **Settings → Builds**, defina **Build command** `npm ci --legacy-peer-deps && npm run build` e **Build output directory** `docs/.vitepress/dist` (raiz do repositório vazia). Só o `wrangler.json` com `pages_build_output_dir` não executa o build.
+**Cloudflare Pages** (integração Git): ligue o projeto a `runawaydevil/oldpiratasclub`. Em **Settings → Builds**: **Build command** `npm ci --legacy-peer-deps && npm run build` (ou `npm run build` se as dependências já forem instaladas), **Build output directory** `docs/.vitepress/dist`, raiz vazia. **Não** defina **Deploy command** como `npx wrangler deploy` — isso é comando de Workers; o Pages publica o `docs/.vitepress/dist` automaticamente após o build. Deixe **Deploy command** vazio ou remova-o. Só o `wrangler.json` com `pages_build_output_dir` não executa o build.
 
 ### Ambientes
 
