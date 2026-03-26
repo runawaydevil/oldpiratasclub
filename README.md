@@ -132,7 +132,7 @@ O build utiliza VitePress para gerar arquivos estáticos otimizados:
 - Pipeline completo com stages: checkout, setup, install, test, lint, build, deploy
 - Deploy via SSH/rsync para servidor próprio
 
-**Cloudflare Pages** (integração Git): ligue o projeto a `runawaydevil/oldpiratasclub`. Em **Settings → Builds**: **Build command** `npm ci --legacy-peer-deps && npm run build` (ou `npm run build` se as dependências já forem instaladas), **Build output directory** `docs/.vitepress/dist`, raiz vazia. **Não** defina **Deploy command** como `npx wrangler deploy` — isso é comando de Workers; o Pages publica o `docs/.vitepress/dist` automaticamente após o build. Deixe **Deploy command** vazio ou remova-o. Só o `wrangler.json` com `pages_build_output_dir` não executa o build.
+**Cloudflare Pages** (integração Git): ligue o projeto a `runawaydevil/oldpiratasclub`. Em **Settings → Builds**: **Build command** `npm run build`, **Build output directory** `docs/.vitepress/dist`, **Path** `/`. O ideal é **não** usar Wrangler no deploy (o Pages publica o output sozinho). Se o painel **obrigar** **Deploy command**: `npx wrangler pages deploy docs/.vitepress/dist --project-name=oldpiratasclub` (nome do projeto Pages; tem de coincidir com **Workers & Pages**). Se o Wrangler responder **Project not found [8000007]**, o nome no painel é outro — usa o exato que aparece lá. Token de API: **Account → Cloudflare Pages → Edit** se usares `CLOUDFLARE_API_TOKEN`. Só o `wrangler.json` com `pages_build_output_dir` não executa o build.
 
 ### Ambientes
 
