@@ -62,7 +62,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # Cloudflare Pages deployment job (optional)
+  # Cloudflare Pages API (/pages/projects/<name>) — requires a real Pages project, not a Worker.
+  # If deploy fails with 8000007: create Pages via Dashboard (Create → Pages) or: wrangler pages project create <name>
   deploy-cloudflare:
     runs-on: ubuntu-latest
     needs: build

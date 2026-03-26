@@ -101,65 +101,7 @@ export default {
         
         testFavicon()
       }
-      
-      // Sistema para garantir funcionamento do theme switcher e persistência
-      const ensureThemeSwitcher = () => {
-        const switcher = document.querySelector('.VPSwitchAppearance')
-        if (switcher) {
-          // Garantir que o switcher tenha os event listeners corretos
-          switcher.addEventListener('click', () => {
-            setTimeout(() => {
-              // Forçar atualização do ícone após mudança de tema
-              const isDark = document.documentElement.classList.contains('dark')
-              const sunIcon = switcher.querySelector('.sun')
-              const moonIcon = switcher.querySelector('.moon')
-              
-              if (sunIcon && moonIcon) {
-                if (isDark) {
-                  (sunIcon as HTMLElement).style.display = 'none';
-                  (moonIcon as HTMLElement).style.display = 'block'
-                } else {
-                  (sunIcon as HTMLElement).style.display = 'block';
-                  (moonIcon as HTMLElement).style.display = 'none'
-                }
-              }
-              
-              // Garantir persistência do tema
-              try {
-                localStorage.setItem('vitepress-theme-appearance', isDark ? 'dark' : 'light')
-              } catch (e) {
-                console.warn('Não foi possível salvar preferência de tema:', e)
-              }
-              
-              // Verificação específica para mobile
-              if (window.innerWidth <= 768) {
-                // Forçar re-render dos estilos mobile
-                document.body.style.display = 'none'
-                document.body.offsetHeight // trigger reflow
-                document.body.style.display = ''
-              }
-            }, 100)
-          })
-        }
-      }
-      
-      // Sistema para restaurar tema salvo
-      const restoreTheme = () => {
-        try {
-          const savedTheme = localStorage.getItem('vitepress-theme-appearance')
-          if (savedTheme) {
-            const isDark = savedTheme === 'dark'
-            const currentIsDark = document.documentElement.classList.contains('dark')
-            
-            if (isDark !== currentIsDark) {
-              document.documentElement.classList.toggle('dark', isDark)
-            }
-          }
-        } catch (e) {
-          console.warn('Não foi possível restaurar tema salvo:', e)
-        }
-      }
-      
+
       // Sistema para garantir funcionamento do menu mobile
       const ensureMobileMenu = () => {
         const hamburger = document.querySelector('.VPNavBarHamburger') as HTMLElement
@@ -207,14 +149,11 @@ export default {
       }
       
       // Executar imediatamente e também após mudanças de rota
-      restoreTheme()
       ensureFavicon()
-      ensureThemeSwitcher()
       ensureMobileMenu()
       if (router) {
         router.onAfterRouteChanged = () => {
           ensureFavicon()
-          ensureThemeSwitcher()
           ensureMobileMenu()
         }
       }

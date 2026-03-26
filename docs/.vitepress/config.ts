@@ -209,7 +209,7 @@ export default defineConfig({
       })
     ]
   },
-  appearance: true,
+  appearance: 'force-dark',
   themeConfig: {
     logo: '/icon.png',
     siteTitle: '#hacking',
@@ -238,7 +238,9 @@ export default defineConfig({
     sidebar,
 
     footer: {
-      message: `Feito com ❤️ para a comunidade | versão ${version} mar/26`,
+      message: `Feito com ❤️ para a comunidade | versão ${version} mar/26
+
+Este site não hospeda arquivos — apenas ligações e documentação.`,
       copyright: '2024-2026 • runawaydevil'
     }
   }
