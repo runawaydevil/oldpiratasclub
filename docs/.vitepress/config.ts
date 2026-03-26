@@ -20,7 +20,7 @@ const rssOptions: RSSOptions = {
   author: {
     name: 'runawaydevil',
     email: 'pablomurad@pm.me',
-    link: 'https://github.com/runawaydevil'
+    link: 'https://piratas.club'
   },
   filename: 'feed.rss',
   log: true,
@@ -189,8 +189,6 @@ export default defineConfig({
     ['meta', { property: 'og:image', content: 'https://piratas.club/dl1.png' }],
     ['meta', { property: 'og:image:alt', content: 'piratas.club - Vault de Recursos Digitais' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@runawayd3vil' }],
-    ['meta', { name: 'twitter:creator', content: '@runawayd3vil' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
     ['link', { rel: 'canonical', href: 'https://piratas.club/' }]
   ],
@@ -219,22 +217,10 @@ export default defineConfig({
     nav: [
       { text: 'Início', link: '/' },
       { text: 'Megathread', link: '/megathread/' },
-      { text: 'FMHY Wiki', link: '/fmhy/' },
-      {
-        text: 'Redes',
-        items: [
-          { text: '🌐 Site Pessoal', link: 'https://pablo.space' },
-          { text: '🐙 GitHub', link: 'https://github.com/runawaydevil' },
-          { text: '🐦 Twitter (X)', link: 'https://x.com/runawayd3vil' },
-          { text: '🧠 Reddit', link: 'https://reddit.com/u/runawaydevil' }
-        ]
-      }
+      { text: 'FMHY Wiki', link: '/fmhy/' }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/runawaydevil' },
-      { icon: 'twitter', link: 'https://x.com/runawayd3vil' }
-    ],
+    socialLinks: [],
 
     outline: {
       level: [2, 4],
@@ -252,7 +238,7 @@ export default defineConfig({
     sidebar,
 
     footer: {
-      message: `Feito com ❤️ para a comunidade | v${version}`,
+      message: `Feito com ❤️ para a comunidade | versão ${version} mar/26`,
       copyright: '2024-2026 • runawaydevil'
     }
   }

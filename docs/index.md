@@ -6,7 +6,6 @@ description: Vault de recursos — Megathread em português e espelho da wiki FM
 hero:
   name: piratas.club
   text: Vault
-  tagline: Megathread (PT) · FMHY Wiki (EN) · Um só sítio
   actions:
     - theme: brand
       text: Megathread
@@ -14,9 +13,6 @@ hero:
     - theme: alt
       text: FMHY Wiki
       link: /fmhy/
-    - theme: alt
-      text: GitHub
-      link: https://github.com/runawaydevil/runawaydevil.github.io
 
 features:
   - icon: 🇧🇷
