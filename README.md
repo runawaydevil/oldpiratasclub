@@ -8,7 +8,7 @@
 
 Repositório de documentação estática construído com VitePress, servindo como vault de recursos digitais, guias técnicos e ferramentas organizadas para a comunidade.
 
-**Site:** [piratas.club](https://piratas.club) | **Repositório:** [github.com/runawaydevil/runawaydevil.github.io](https://github.com/runawaydevil/runawaydevil.github.io)
+**Site:** [piratas.club](https://piratas.club) | **Repositório:** [github.com/runawaydevil/oldpiratasclub](https://github.com/runawaydevil/oldpiratasclub)
 
 ## Overview
 
@@ -79,8 +79,8 @@ docs/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/runawaydevil/runawaydevil.github.io.git
-cd runawaydevil.github.io
+git clone https://github.com/runawaydevil/oldpiratasclub.git
+cd oldpiratasclub
 
 # Instale as dependências
 npm install
@@ -131,6 +131,8 @@ O build utiliza VitePress para gerar arquivos estáticos otimizados:
 **Jenkins** (alternativo):
 - Pipeline completo com stages: checkout, setup, install, test, lint, build, deploy
 - Deploy via SSH/rsync para servidor próprio
+
+**Cloudflare Pages** (integração Git): o projeto deve estar ligado a este repositório (`runawaydevil/oldpiratasclub`), não ao `runawaydevil.github.io`. Em **Settings → Builds**, defina **Build command** `npm ci --legacy-peer-deps && npm run build` e **Build output directory** `docs/.vitepress/dist` (raiz do repositório vazia). Só o `wrangler.json` com `pages_build_output_dir` não executa o build.
 
 ### Ambientes
 
