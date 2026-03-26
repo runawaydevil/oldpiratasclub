@@ -35,11 +35,11 @@ describe('Config Tests', () => {
 
 describe('Content Tests', () => {
   test('Main sections exist', () => {
-    const fhmyIndex = path.join(__dirname, '../docs/dbordo/fhmy/index.md')
-    const pirataIndex = path.join(__dirname, '../docs/dbordo/pirataria-thread/index.md')
-    
+    const fhmyIndex = path.join(__dirname, '../docs/fmhy/index.md')
+    const megathreadIndex = path.join(__dirname, '../docs/megathread/index.md')
+
     expect(fs.existsSync(fhmyIndex)).toBe(true)
-    expect(fs.existsSync(pirataIndex)).toBe(true)
+    expect(fs.existsSync(megathreadIndex)).toBe(true)
   })
 
   test('Public assets exist', () => {

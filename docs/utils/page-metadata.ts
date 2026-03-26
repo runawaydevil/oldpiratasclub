@@ -96,11 +96,13 @@ export class PageMetadataExtractor {
     
     // Map URL segments to categories
     const categoryMap: Record<string, string> = {
-      'dbordo': 'dbordo',
-      'blog': 'blog',
-      'ref': 'ref',
-      'search': 'navigation',
-      'about': 'ref'
+      megathread: 'megathread',
+      fmhy: 'fmhy',
+      dbordo: 'dbordo',
+      blog: 'blog',
+      ref: 'ref',
+      search: 'navigation',
+      about: 'ref'
     }
     
     return categoryMap[firstSegment] || 'geral'

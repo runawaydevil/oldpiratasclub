@@ -21,7 +21,7 @@
     "test:run": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "ci": "npm run type-check && npm run lint && npm run test:run && npm run build",
-    "prepare": "npm run build"
+    "migrate-links": "node scripts/migrate-links.mjs"
   },
   "keywords": [
     "documentation",
@@ -58,7 +58,6 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3",
-    "vite-plugin-vitepress-auto-sidebar": "^1.7.1"
+    "gray-matter": "^4.0.3"
   }
 }
